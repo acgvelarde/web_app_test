@@ -1,0 +1,53 @@
+Herman\WebAppTestBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: Herman\WebAppTestBundle\Entity\UserRepository
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: true
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        email:
+            type: string
+            length: 250
+            fixed: false
+            nullable: false
+        firstName:
+            type: string
+            length: 250
+            fixed: false
+            nullable: true
+            column: first_name
+        lastName:
+            type: string
+            length: 250
+            fixed: false
+            nullable: true
+            column: last_name
+        registrationToken:
+            type: string
+            length: 250
+            fixed: false
+            nullable: true
+            column: registration_token
+        dateCreated:
+            type: datetime
+            nullable: false
+            column: date_created
+        status:
+            type: smallint
+            nullable: false
+    manyToOne:
+        country:
+            targetEntity: Herman\WebAppTestBundle\Entity\Country
+            cascade: {  }
+            mappedBy: null
+            inversedBy: users
+            joinColumns:
+                country_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -8,6 +8,8 @@
 </div>
 {% endif %}
 
+<h1>Email subscription page</h1>
+
 <form action="{{ path('web_app_test_subscribe_email_save') }}" method="POST"  novalidate>
     {{ form_row(form.email) }}
     {{ form_rest(form) }}

@@ -5,3 +5,15 @@ Herman\WebAppTestBundle\Entity\EmailSubscriber:
         email:
             - Email: ~
             - NotBlank: ~
+            
+Herman\WebAppTestBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        email:
+            - Email: ~
+            - NotBlank: { message: Email address is required }
+        firstName:
+            - NotBlank: { message: First name is required }
+        lastName:
+            - NotBlank: { message: Last name is required }

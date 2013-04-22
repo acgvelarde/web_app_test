@@ -9,3 +9,28 @@ web_app_test_subscribe_email_save:
     defaults: { _controller: WebAppTestBundle:Default:saveEmail }
     requirements:
         _method: POST
+        
+web_app_test_registration:
+    pattern:  /sign-up
+    defaults: { _controller: WebAppTestBundle:Default:registration }
+    requirements:
+        _method: GET
+        
+web_app_test_registration_save:
+    pattern:  /sign-up
+    defaults: { _controller: WebAppTestBundle:Default:saveRegistration }
+    requirements:
+        _method: POST
+        
+web_app_test_user_activation:
+    pattern:  /user-activation/{id}/{token}
+    defaults: { _controller: WebAppTestBundle:Default:activateUser }
+    requirements:
+        _method: GET
+        id: \d+
+        
+web_app_test_homepage:
+    pattern:  /
+    defaults: { _controller: WebAppTestBundle:Default:index }
+    requirements:
+        _method: GET

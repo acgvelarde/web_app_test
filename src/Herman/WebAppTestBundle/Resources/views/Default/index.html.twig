@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+{% if app.session.hasFlash('success')%}
+<div>
+    {{ app.session.getFlash('success') | raw }}
+</div>
+{% endif %}
+
+<h1>Home page</h1>
+
+<ul>
+    <li><a href="{{ path('web_app_test_subscribe_email') }}">Email Subscription Page</a></li>
+    <li><a href="{{ path('web_app_test_registration') }}">Registration Page</a></li>
+</ul>
+{% endblock %}

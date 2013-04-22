@@ -1,5 +1,6 @@
 .project
 .DS_Store
+composer.json
 app/cache/
 app/logs/
 vendor/

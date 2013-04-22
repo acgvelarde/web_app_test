@@ -14,7 +14,7 @@ Herman\WebAppTestBundle\Entity\EmailSubscriber:
             type: string
             length: 250
             fixed: false
-            nullable: true
+            nullable: false
         dateCreated:
             type: datetime
             nullable: false
