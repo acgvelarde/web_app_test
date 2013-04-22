@@ -1,0 +1,22 @@
+Herman\WebAppTestBundle\Entity\EmailSubscriber:
+    type: entity
+    table: email_subscribers
+    repositoryClass: Herman\WebAppTestBundle\Entity\EmailSubscriberRepository
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: true
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        email:
+            type: string
+            length: 250
+            fixed: false
+            nullable: true
+        dateCreated:
+            type: datetime
+            nullable: false
+            column: date_created
+    lifecycleCallbacks: {  }

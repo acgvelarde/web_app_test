@@ -1,0 +1,4 @@
+web_app_test:
+    resource: "@WebAppTestBundle/Resources/config/routing.yml"
+    prefix:   /
+

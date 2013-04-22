@@ -1,0 +1,7 @@
+Herman\WebAppTestBundle\Entity\EmailSubscriber:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        email:
+            - Email: ~
+            - NotBlank: ~

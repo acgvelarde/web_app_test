@@ -1,0 +1,7 @@
+parameters:
+#    web_app_test.example.class: Herman\WebAppTestBundle\Example
+
+services:
+#    web_app_test.example:
+#        class: %web_app_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

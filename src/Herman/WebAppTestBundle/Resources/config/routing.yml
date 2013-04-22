@@ -1,0 +1,11 @@
+web_app_test_subscribe_email:
+    pattern:  /subscribe-email
+    defaults: { _controller: WebAppTestBundle:Default:subscribeEmail }
+    requirements:
+        _method: GET
+
+web_app_test_subscribe_email_save:
+    pattern:  /subscribe-email
+    defaults: { _controller: WebAppTestBundle:Default:saveEmail }
+    requirements:
+        _method: POST
